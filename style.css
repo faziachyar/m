@@ -1,0 +1,209 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+nav, nav a{
+
+    text-transform: uppercase;
+    color: azure;
+}
+
+nav a.active{
+
+    color: blue;
+    font-weight: bold;
+}
+
+nav a :hover{
+
+    color: blue;
+}
+
+nav h5{
+
+    font-weight: bold;
+}
+
+.main{
+
+    color: white;
+}
+
+.main h1 span{
+
+    font-weight: 400;
+    color: blue;
+}
+
+.main p{
+
+    font-weight: 400;
+}
+
+.main p fazri{
+
+    margin-top: 50px;
+}
+
+.main p span{
+
+    color: blue;
+    font-weight: bold;
+}
+
+.card-body {
+    position: relative;
+    overflow: hidden;
+}
+
+.bg-img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 50%;
+}
+
+.camera {
+    position: absolute;
+    top: 100;
+    bottom: 0;
+    margin-left: 100;
+    width: 30%;
+}
+
+.footer {
+    color: white;
+    margin-top: 60;
+    font-weight: bold;
+}
+
+.footer cr {
+
+}
+
+.row > .column {
+    padding: 0 8px;
+}
+  
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Create four equal columns that floats next to eachother */
+.column {
+    float: left;
+    width: 25%;
+}
+
+
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: black;
+}
+  
+
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    width: 90%;
+    max-width: 1200px;
+}
+  
+
+.close {
+    color: white;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 35px;
+    font-weight: bold;
+}
+  
+.close:hover,
+.close:focus {
+    color: #999;
+    text-decoration: none;
+    cursor: pointer;
+}
+  
+
+.mySlides {
+    display: none;
+}
+  
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+}
+  
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+  
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+  
+.caption-container {
+    text-align: center;
+    background-color: black;
+    padding: 2px 16px;
+    color: white;
+}
+  
+img.demo {
+    opacity: 0.6;
+}
+  
+.active,
+.demo:hover {
+    opacity: 1;
+}
+  
+img.hover-shadow {
+    transition: 0.3s;
+    width: 10;
+    height: 10;
+}
+  
+.hover-shadow:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}

@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>Fazri Achyar</title>
+  </head>
+  <style>
+    body {
+      background-image: url("/images/daun.jpg");
+      background-size: cover;
+      
+    }
+    </style>
+  <body>
+
+    <div class="container mt-5">
+        <div class="card" style="background-color: rgb(32, 15, 48);">
+            <div class="card-body pl-5">
+                <nav class="nav">
+                    <h5 class="mr-5"><span>FAZRI</span><br>ACHYAR</h5>     
+              
+                    <a class="nav-link" href="index.html">home<>
+                    <a class="nav-link active" href="#">gallery</a>
+                    <a class="nav-link" href="contact.html">contact</a>
+                  </nav>
+                      
+                  <div class="row main mt-5">
+                    <div class="col-md-6">
+                      <h1 class="display-4">Welcome to<br>my <span>Gallery</span></h1>
+                     <br>
+                    </div>
+                </div>
+                
+                <div class="row mt-5">
+                  <div class="col-md-6">
+                    <img src="/images/camera.png" class="camera">
+                  </div>
+                </div>
+                  
+                  <div class="row">
+                    <div class="column">
+                      
+                      <img src="/images/gal1.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
+                    </div>
+                    <div class="column">
+                      <img src="/images/gal2.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow">
+                    </div>
+                    <div class="column">
+                      <img src="/images/gal3.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow">
+                    </div>
+                    <div class="column">
+                      <img src="/images/gal4.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow">
+                    </div>
+                  </div>
+                  
+                  <div id="myModal" class="modal">
+                    <span class="close cursor" onclick="closeModal()">&times;</span>
+                    <div class="modal-content">
+                  
+                      <div class="mySlides">
+                        <div class="numbertext">1 / 4</div>
+                        <img src="/images/gal1_wide.jpg" style="width:100%">
+                      </div>
+                  
+                      <div class="mySlides">
+                        <div class="numbertext">2 / 4</div>
+                        <img src="/images/gal2_wide.jpg" style="width:100%">
+                      </div>
+                  
+                      <div class="mySlides">
+                        <div class="numbertext">3 / 4</div>
+                        <img src="/images/gal3_wide.jpg" style="width:100%">
+                      </div>
+                  
+                      <div class="mySlides">
+                        <div class="numbertext">4 / 4</div>
+                        <img src="/images/gal4_wide.jpg" style="width:100%">
+                      </div>
+                  
+                      <!-- Next/previous controls -->
+                      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                  
+                      <!-- Caption text -->
+                      <div class="caption-container">
+                        <p id="caption"></p>
+                      </div>
+                  
+                      <!-- Thumbnail image controls -->
+                      <div class="column">
+                        <img class="demo" src="gal1.jpg" onclick="currentSlide(1)" alt="Nature">
+                      </div>
+                  
+                      <div class="column">
+                        <img class="demo" src="gal2.jpg" onclick="currentSlide(2)" alt="Snow">
+                      </div>
+                  
+                      <div class="column">
+                        <img class="demo" src="gal3.jpg" onclick="currentSlide(3)" alt="Mountains">
+                      </div>
+                  
+                      <div class="column">
+                        <img class="demo" src="gal4.jpg" onclick="currentSlide(4)" alt="Lights">
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <script>
+                    function openModal() {
+                      document.getElementById("myModal").style.display = "block";
+                    }
+                    
+                    function closeModal() {
+                      document.getElementById("myModal").style.display = "none";
+                    }
+                    
+                    var slideIndex = 1;
+                    showSlides(slideIndex);
+                    
+                    function plusSlides(n) {
+                      showSlides(slideIndex += n);
+                    }
+                    
+                    function currentSlide(n) {
+                      showSlides(slideIndex = n);
+                    }
+                    
+                    function showSlides(n) {
+                      var i;
+                      var slides = document.getElementsByClassName("mySlides");
+                      var dots = document.getElementsByClassName("demo");
+                      var captionText = document.getElementById("caption");
+                      if (n > slides.length) {slideIndex = 1}
+                      if (n < 1) {slideIndex = slides.length}
+                      for (i = 0; i < slides.length; i++) {
+                          slides[i].style.display = "none";
+                      }
+                      for (i = 0; i < dots.length; i++) {
+                          dots[i].className = dots[i].className.replace(" active", "");
+                      }
+                      slides[slideIndex-1].style.display = "block";
+                      dots[slideIndex-1].className += " active";
+                      captionText.innerHTML = dots[slideIndex-1].alt;
+                    }
+                    </script>
+
+                  
+
+                  
+
+                  <div class="footer">
+                      <br>
+                      <br>
+                      
+                      <p class="cr mt-4" align="center">Copyright Fazri Achyar 2020</p>
+                  </div>
+            </div>
+          </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>
